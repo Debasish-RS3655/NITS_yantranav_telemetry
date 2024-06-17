@@ -5,6 +5,7 @@ import express from "express"
 import cors from "cors";
 import bodyParser from 'body-parser';
 import webcam from './routes/webcam.js';
+import lidar from './routes/lidar.js';
 import dotenv from 'dotenv';
 
 dotenv.config();
@@ -23,5 +24,7 @@ app.use(function (req, res, next) {
 
 // getting and receiving feeds from cam1 and cam2
 app.use('/webcam', webcam);
+// get and lidar latest data
+app.use('/lidar', lidar);
 
 app.listen(port, () => console.log("Control panel backend listening to port: " + port));

@@ -1,4 +1,4 @@
-# python code to send the captured images contiuously to the server creating a stream
+# for the first webcam
 # Debashish Buragohain
 
 import asyncio

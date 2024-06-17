@@ -21,7 +21,7 @@ router.get('/cam1', (req, res) => {
 router.post('/cam2', (req, res) => {
     const { image } = req.body;
     if (!image) return res.status(400).json({ error: "Feed not provided for webcam2" });    
-    cam2Feed = feed;
+    cam2Feed = image;
     res.json({ message: 'Feed uploaded successfully.' });
 });
 
